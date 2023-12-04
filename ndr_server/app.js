@@ -8,8 +8,10 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
+const allowedOrigins = ['http://localhost:4200', 'https://ndr-ingame-frontend.vercel.app'];
+
 app.use(cors({
-    origin: 'http://localhost:4200' // replace with your domain or specific front-end origin
+    origin: allowedOrigins // replace with your domain or specific front-end origin
 }));
 
 // Needed to read .env file
