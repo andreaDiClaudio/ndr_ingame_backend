@@ -22,6 +22,10 @@ cloudinary.config({
     secure: true
 })
 
+app.get("/", async (req, res) => {
+    res.status(200).json("WORKS");
+})
+
 // returns all the games folder count
 app.get('/api/games', async (req, res) => {
     try{
